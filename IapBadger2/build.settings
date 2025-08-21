@@ -1,0 +1,95 @@
+settings =
+{
+    splashScreen = {
+        enable = false
+    },
+
+    plugins =
+    {
+        ["CoronaProvider.gameNetwork.apple"] = {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.google.iap.billing.v2"] = {
+            publisherId = "com.solar2d",
+            supportedPlatforms = { android = true }
+        },
+        ["plugin.gpgs.v3"] = {
+            publisherId = "com.solar2d",
+            supportedPlatforms = { android = true }
+        },
+        ["plugin.apple.iap"] = {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.apple.iap.helper"] = {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.openssl"] = {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.amazon.iap"] = {
+            publisherId = "com.coronalabs"
+        },
+    },
+
+    iphone =
+    {
+        xcassets = "Images.xcassets",
+        plist =
+        {
+            UIStatusBarHidden = true,
+            UILaunchStoryboardName = "LaunchScreen",
+            ITSAppUsesNonExemptEncryption = false,
+            CFBundleLocalizations = {
+                "en",
+                "es",
+                "fr",
+                "it"
+            },
+        }
+    },
+
+  android =
+  {
+    minSdkVersion = "21",
+    googlePlayGamesAppId = "REPLACEME",
+    usesPermissions = {
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.GET_ACCOUNTS",
+        "android.permission.INTERNET",
+        "com.android.vending.BILLING",
+        "com.android.vending.CHECK_LICENSE"
+    },
+  },
+
+  orientation =
+  {
+    default = "landscapeLeft",
+    supported = {"landscapeLeft", "landscapeRight"},
+  },
+
+  window =
+  {
+    defaultMode = 'normal',
+    defaultViewWidth = 960,
+    defaultViewHeight = 960 * 9 / 16,
+    resizable = true,
+    minViewWidth = 480,
+    minViewHeight = 480 * 9 / 16,
+    enableCloseButton = true,
+    enableMinimizeButton = true,
+    suspendWhenMinimized = true,
+    titleText =
+    {
+      default = 'EXAMPLE'
+    }
+  },
+
+  excludeFiles =
+  {
+    all = {".git/*", ".gitignore", "*.pdn", "*.keystore", "*.js", "*.md", "icons/*", "PlayStoreAssets/*"},
+    iphone = { "AndroidResources", "Icon-*pi.png", "Icon*.icns", "Icon*.ico", "AppstoreAuthenticationKey.pem"},
+    android = { "Images.xcassets", "Icon*@2x.png", "Icon*.icns", "Icon*.ico", "Default-*.png"},
+    win32 = {"AndroidResources/*", "AppstoreAuthenticationKey.pem"}
+  },
+}
